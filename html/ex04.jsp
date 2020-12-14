@@ -39,7 +39,7 @@
             }
         %>
         <%
-        String userIntro=request.getParameter("user_intro");
+            String userIntro=request.getParameter("user_intro");
         %>
         <h3>자기소개: <%=userIntro%></h3>
     </body>

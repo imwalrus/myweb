@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>html/select.html</title>
+    </head>
+
+    <body>
+        <h3>그룹별 선택 항목을 제공합니다.</h3>
+        <form>
+            <label>전공 분야를 선택하세요.
+                <select name="subjects" id="subjects" multiple="multiple">
+                    <optgroup label="Language">
+                        <option value="1">HTML5</option>
+                        <option value="2">CSS3</option>
+                        <option value="3">JavaScript</option>
+                        <option value="4">JQuery</option>
+                    </optgroup>
+                    <optgroup label="Computer">
+                        <option value="1">Software</option>
+                        <option value="2">Robot</option>
+                        <option value="3">System</option>
+                        <option value="4">OS</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <input type="submit" value="선택">
+                <input type="reset" value="다시선택">
+            </label>
+            <h3>선택사항을 직접 입력하세요.</h3>
+            <label>전공 분야를 입력하세요
+                <input type="text" list="majorlist" name="major">
+                <datalist id="majorlist">
+                    <option value="Software">소프트웨어</option>
+                    <option value="Robot">로봇</option>
+                    <option value="System">시스템</option>
+                    <option value="OS">운영체제</option>
+                </datalist>
+                <p></p>
+                <input type="submit" value="선택">
+                <input type="reset" value="다시선택">
+            </label>
+            <h3>오늘 날짜 입력</h3>
+            Today:
+            <input type="date" name="today">
+            <h3>프로젝트 수행 기간</h3>
+            From:
+            <input type="date" name="from" min="2018-03-01" max="2018-12-31">
+            To:
+            <input type="date" name="to" min="2020-03-01" max="2020-12-31">
+            <p></p>
+            <input type="submit" value="선택">
+            <input type="reset" value="다시선택">
+            <h3>생년월(년/월) 입력</h3>
+            생년월:
+            <input type="month" name="birth">
+            <h3>주간 계획(년/주) 입력</h3>
+            주간 계획:
+            <input type="week" name="weekend">
+            <h3>현재 시간 입력</h3>
+            Time:
+            <input type="time" name="now">
+            <h3>생일(년도, 월, 일, 시간) 입력</h3>
+            Birthday:
+            <input type="datetime-local" name="bDaytime">
+            <p></p>
+            <input type="submit" value="선택">
+            <input type="reset" value="다시선택">
+
+        </form>
+    </body>
+
+</html>

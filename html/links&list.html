@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>html/links&list.html</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/links&list.html</title>
+</head>
+<style>
+    a:link {
+        color: red;
+        text-decoration: underline;
+    }
 
-    <body>
-        <a href="link.html" target="_blank">link페이지</a>
+    a:visited {
+        color: khaki;
+    }
 
-        <h1>UL 리스트</h1>
-        <ul style="list-style-type: circle;">
-            <li>Orange</li>
-            <li>Apple</li>
-            <li>Banana</li>
-        </ul>
+    a:hover {
+        text-decoration: overline;
+    }
 
-        <h1>OL 리스트</h1>
-        <ol style="list-style-type:upper-roman;">
-            <li>Orange</li>
-            <li>Apple</li>
-            <li>Banana</li>
-        </ol>
-    </body>
+    a:active {
+        color: chartreuse;
+    }
+
+    ul:hover {
+        color: chocolate;
+    }
+    ol>li:nth-last-child(2) {
+        background: cyan;
+    }
+    ul:nth-child(3) {
+        border: 2px solid green;
+    }
+    ul:nth-of-type(2) {
+        border: 3px dotted red;
+    }
+</style>
+
+<body>
+    <a href="link.html" target="_self">link페이지</a>
+
+    <h1>UL 리스트</h1>
+    <ul style="list-style-type: circle;">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+
+    <h1>OL 리스트</h1>
+    <ol style="list-style-type:upper-roman;">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ol>
+
+    <ul style="list-style-type: circle;">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+</body>
 
 </html>

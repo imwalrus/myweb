@@ -26,4 +26,4 @@ trTag2.append(tdTag3);
 trTag2.append(tdTag4);
 
 console.log(trTag2);
-tableTag.append(trTag2);
+tableTag.append(trTag2); 

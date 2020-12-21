@@ -10,22 +10,18 @@
     </head>
 
     <body>
-        <%
-            String userSex=request.getParameter("sex");
-            String userGrade=request.getParameter("year");
-        %>
-        <h1>성별: <%=userSex%></h1>
-        <h1>학년: <%=userGrade%></h1>
-        <%
-            String[] userSubject=request.getParameterValues("subject");
-        %>
-        <%
-            for(String user : userSubject) {
-        %>
-        <h1><%=user%></h1>
-        <%
-            }
-        %>
+        <% String userSex=request.getParameter("sex"); String userGrade=request.getParameter("year"); %>
+            <h1>성별: <%=userSex%>
+            </h1>
+            <h1>학년: <%=userGrade%>
+            </h1>
+            <% String[] userSubject=request.getParameterValues("subject"); %>
+                <h1>관심을 가지고 있는 학습주제: </h1>
+                <% for(String user : userSubject) { %>
+                    <h1>
+                        <%=user%>
+                    </h1>
+                    <% } %>
     </body>
 
     </html>

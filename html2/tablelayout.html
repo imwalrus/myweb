@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2/tablelayout.html</title>
+    <style>
+        td, th {
+            border: 1px solid red;
+        }
+
+        #tb1 {
+            border: 2px solid red;
+            table-layout: auto;
+        }
+
+        #tb2 {
+            border: 3px dotted red;
+            background-color: yellow;
+            table-layout: fixed;
+        }
+
+        #tb3 {
+            border: 3px solid red;
+            background-color: yellow;
+            border-collapse: separate;
+            table-layout: auto;
+        }
+
+        #tb4 {
+            border: 3px solid red;
+            background-color: yellow;
+            border-collapse: collapse;
+            table-layout: auto;
+        }
+
+        #tb5 {
+            border: 2px solid green;
+            border-spacing: 10px;   /* 상하좌우 */
+        }
+
+        #tb6 {
+            border: 3px solid maroon;
+            background-color: aqua;
+            border-spacing: 20px 40px;  /* 첫번째값: 좌우, 두번째값: 상하 */
+        }
+
+        #tb7 {
+            border-collapse: separate;
+            empty-cells: hide;
+        }
+
+        #tb8 {
+            border-collapse: separate;
+            empty-cells: show;
+        }
+
+        #c1 {
+            border: 3px solid blue;
+            caption-side: top;
+            border-collapse: collapse;
+        }
+
+        #c2 {
+            border: 3px solid red;
+            caption-side: bottom;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>table layout auto 예제</h2>
+    <table id="tb1">
+        <tr>
+            <th>table layout auto</th>
+            <td>내용 분량에 따라서 자동으로 조절</td>
+        </tr>
+    </table>
+    <p></p>
+    <h2>table layout fixed 예제</h2>
+    <table id="tb2" width="250px">
+        <tr>
+            <th>table layout fixed</th>
+            <td>내용 분략과 상관 없이 고정</td>
+        </tr>
+    </table>
+    <p></p>
+    <h2>table collapse 예제</h2>
+    <table id="tb3" width="350px">
+        <tr>
+            <th>table border-collapse</th>
+            <td>separate 적용</td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="tb4" width="350px">
+        <tr>
+            <th>table border-collapse</th>
+            <td>collapse 적용</td>
+        </tr>
+    </table>
+    <p></p>
+    <h2>table spacing 예제</h2>
+    <table id="tb5" width="350px">
+        <tr>
+            <th>table border-spacing</th>
+            <td>10px</td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="tb6" width="350px">
+        <tr>
+            <th>table border-spacing</th>
+            <td>20px 40px</td>
+        </tr>
+    </table>
+    <p></p>
+    <h2>empty cells 예시</h2>
+    <table id="tb7" border="1" width="300px">
+        <tr>
+            <td>국어</td>
+            <td>영어</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="tb8" border="1" width="300px">
+        <tr>
+            <td>국어</td>
+            <td>영어</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <h2>캡션 예제</h2>
+    <table id="c1" border="1" width="300px">
+        <caption>[table 1-1] Korea University</caption>
+        <tr>
+            <th>University</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>서울대학교</td>
+            <td>홍현성</td>
+            <td>KOREA</td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="c2" border="1" width="300px">
+        <caption>[table 1-1] USA University</caption>
+        <tr>
+            <th>University</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Havard</td>
+            <td>Jack</td>
+            <td>USA</td>
+        </tr>
+    </table>
+</body>
+
+</html>

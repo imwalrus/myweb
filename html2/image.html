@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html2/image.html</title>
+    <style>
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h2>Responsive Image Gallery</h2>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank"
+                href="https://upload.wikimedia.org/wikipedia/commons/3/31/Beech_trees_in_Mallard_Wood%2C_New_Forest_-_geograph.org.uk_-_779513.jpg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Beech_trees_in_Mallard_Wood%2C_New_Forest_-_geograph.org.uk_-_779513.jpg"
+                    alt="New Forest National Park" width="600" height="400">
+            </a>
+            <div class="desc">New Forest National Park</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank"
+                href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tunnel_View%2C_Yosemite_Valley%2C_Yosemite_NP_-_Diliff.jpg/1920px-Tunnel_View%2C_Yosemite_Valley%2C_Yosemite_NP_-_Diliff.jpg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tunnel_View%2C_Yosemite_Valley%2C_Yosemite_NP_-_Diliff.jpg/1920px-Tunnel_View%2C_Yosemite_Valley%2C_Yosemite_NP_-_Diliff.jpg"
+                    alt="Yosemite National Park" width="600" height="400">
+            </a>
+            <div class="desc">Yosemite National Park</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank"
+                href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Grand_prismatic_spring.jpg/1920px-Grand_prismatic_spring.jpg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Grand_prismatic_spring.jpg/1920px-Grand_prismatic_spring.jpg"
+                    alt="Yellowstone National Park" width="600" height="400">
+            </a>
+            <div class="desc">Yellowstone National Park</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank"
+                href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Late_Afternoon_at_North_%26_South_Era.jpg/1280px-Late_Afternoon_at_North_%26_South_Era.jpg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Late_Afternoon_at_North_%26_South_Era.jpg/1280px-Late_Afternoon_at_North_%26_South_Era.jpg"
+                    alt="Royal National Park" width="600" height="400">
+            </a>
+            <div class="desc">Royal National Park</div>
+        </div>
+    </div>
 </body>
+
 </html>

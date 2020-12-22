@@ -21,4 +21,4 @@ var grade = 0;
 for (var i = 1; i <= 100; i++) {
     console.log(grade = grade + i);
 }
-document.write("결과값: " + grade + "입니다.") 
+document.write("결과값: " + grade + "입니다.")

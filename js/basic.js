@@ -28,4 +28,4 @@ var str = "reload";
 console.log(str);
 
 let num2 = 20;
-console.log(num2)
+console.log(num2) 

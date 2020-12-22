@@ -1,1 +1,2 @@
-document.getElementById('show');
+let show = document.getElementById('show');
+console.log(show);

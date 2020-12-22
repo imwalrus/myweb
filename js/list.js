@@ -2,13 +2,13 @@ function myFunc() {
     document.write("<ul><li>Apple</li><li>Banana</li></ul>");
 
     let dan = 4;
-    document.write("<ul>");
+    document.write("<table border='1'>")
     for (let i = 1; i <= 10; i++) {
         if (i % 2 == 1) {
-            document.write('<li class="even">' + dan + " X " + i + " = <b>" + (dan * i) + "</b></li>");
+            document.write('<tr><td class="even">' + dan + " X " + i + "</td>" + "<td> = </td><b><td>" + (dan * i) + "</b></td></tr>");
         } else {
-            document.write('<li class="odd">' + dan + " X " + i + " = <b>" + (dan * i) + "</b></li>");
+            document.write('<tr><td class="odd">' + dan + " X " + i + "</td>" + "<td> = </td><b><td>" + (dan * i) + "</b></td></tr>");
         }
     }
-    document.write("</ul>")
+    document.write("</table>")
 }

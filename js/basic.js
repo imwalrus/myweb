@@ -1,7 +1,7 @@
 let num = 10; num3 = 20;
 
 let result = num + num3;
-console.log(result: " + result + "입니다.");
+console.log("result: " + result + "입니다.");
 
 if (result > 30) {
     console.log("30보다 크다.");

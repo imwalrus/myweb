@@ -8,9 +8,9 @@ function myFunc() {
     document.write('<table border="1">')
     for (let i = 1; i <= 10; i++) {
         if (i % 2 == 1) {
-            document.write('<tr><td class="even">' + dan + ' X ' + i + '</td>' + '<td> = </td><td>' + (dan * i) + '</td></tr>');
+            document.write('<tr width="60px"><td class="even">' + dan + ' X ' + i + '</td>' + '<td> = </td><td>' + (dan * i) + '</td></tr>');
         } else {
-            document.write('<tr><td class="odd">' + dan + ' X ' + i + '</td>' + '<td> = </td><td>' + (dan * i) + '</td></tr>');
+            document.write('<tr width="60px"><td class="odd">' + dan + ' X ' + i + '</td>' + '<td> = </td><td>' + (dan * i) + '</td></tr>');
         }
     }
     document.write('</table>')

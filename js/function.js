@@ -28,3 +28,30 @@ function otherfunc(a, b, funcdef) {
     console.log('result: ' + result);
 }
 otherfunc(20, 30, theotherfunc);
+
+let friend1 = {};
+friend1.name = 'Hong';
+friend1.age = 20;
+friend1.hobby = 'Reading'
+
+let friend2 = {
+    name: 'Hwang',
+    age: 20
+}
+
+let friends = [];
+friends[0] = friend1;
+friends[1] = friend2;
+for (friend of friends) {
+    for (field in friend) {
+        console.log(friend[field]);
+    }
+}
+
+// sum(num1, num2);
+
+function sum(a, b) {
+    let n1 = parseInt(a);
+    let n2 = parseInt(b);
+    console.log(n1 + n2);
+}

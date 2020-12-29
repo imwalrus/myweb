@@ -16,19 +16,19 @@ console.log("짝수 합계: " + sum);
 console.log("가장 큰 수: " + max);
 
 let friend1 = {
-    name: '송다희',
+    name: 'Hwang',
     age: 20,
     hobby: '코딩',
     grade: 'A'
 }
 let friend2 = {
-    name: '이나경',
+    name: 'Hong',
     age: 22,
     hobby: '자바',
     grade: 'B'
 }
 let friend3 = {
-    name: '이혜빈',
+    name: 'Park',
     age: 24,
     hobby: '자바스크립트',
     grade: 'C'

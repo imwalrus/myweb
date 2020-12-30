@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal.html</title>
+    <script>
+        function createHeader(a, b, c) {
+            let th = document.createElement('th');
+            th.innerHTML = a;
+            tr.append(th);
+            tb.append(tr);
+        }
+
+        function createData(a, b, c) {
+            if (b % 7 == 0) {
+                tr = document.createElement('tr');
+                
+            }
+            let td = document.createElement('td');
+            td.innerHTML = a;
+            tr.append(td);
+            tb.append(tr);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="show"></div>
+    <script>
+        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat'];
+        let dates = [];
+        for (let i = 1; i <= 31; i++) {
+            dates.push(i);
+        }
+
+        let tb = document.createElement('table');
+        tb.setAttribute('border', '1');
+        let tr = document.createElement('tr');
+
+        days.forEach(createHeader); // table head
+        dates.forEach(createData); // table data
+        
+        document.getElementById('show').append(tb);
+    </script>
+</body>
+
+</html>

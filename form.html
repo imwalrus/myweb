@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <table border="1" id="tbl">
+        <tr>
+            <td><label for="id">ID</label><input type="checkbox"></td>
+            <td>홍길동</td>
+            <td>20세</td>
+            <td>독서</td>
+            <td><button>OK</button></td>
+        </tr>
+    </table>
+    <script>
+        let members = [];
+        for (let i = 1; i <= 3; i++) {
+            let member = {};
+            member.name = '홍길동' + i;
+            member.age = 20 + i + '세';
+            member.hobby = '독서' + i;
+            members.push(member);
+        }
+
+        let fields = ['name', 'age', 'hobby']      
+        let tb = document.getElementById('tbl');
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+
+        members.forEach(createData);
+        function createData(a, b, c) {
+            tr = document.createElement('tr');
+            td = document.createElement('td');
+            let lb = document.createElement('label');
+            lb.setAttribute('for', 'id');
+            lb.innerHTML = 'ID';
+            let ip = document.createElement('input');
+            ip.setAttribute('type', 'checkbox');
+            td.append(lb);
+            td.append(ip);
+            tr.append(td);
+            for (field of fields) {
+                td = document.createElement('td');
+                td.innerHTML = a[field];
+                tr.append(td);
+            }
+            td = document.createElement('td');
+            let btn = document.createElement('button');
+            btn.innerHTML = 'OK';
+            td.append(btn);
+            tr.append(td);
+            tb.append(tr);
+        }
+    </script>
+</body>
+
+</html>

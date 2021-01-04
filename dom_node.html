@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_node.html</title>
+</head>
+
+<body>
+    <h1>DOM Lesson One</h1>
+    <p>Hello world!</p>
+    <div id="show"></div> <!--<ul><li>One</li><li>Two</li></ul>-->
+
+    <script>
+        let ul = document.createElement('ul');
+        let li1 = document.createElement('li');
+        let li2 = document.createElement('li');
+        let text1 = document.createTextNode('One');
+        let text2 = document.createTextNode('Two');
+        li1.append(text1);
+        li2.append(text2);
+        ul.append(li1);
+        ul.append(li2);
+        document.getElementById('show').append(ul);
+
+        let bdy = document.getElementsByTagName('body');
+        console.log(bdy[0].childNodes[1].childNodes[0]);
+
+        let p = document.getElementsByTagName('p');
+        console.log(p[0].previousSibling.nodeValue = 'hello');
+    </script>
+</body>
+
+</html>

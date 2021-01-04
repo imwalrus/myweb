@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math.html</title>
+</head>
+
+<body>
+    <script>
+        let vals = []; // 1, 2, 3, 4, 5, 6 (중복값 제외)
+        for (let i = 0; i <= 5; i++) {
+            let val = Math.floor(Math.random() * 6) + 1; // Math.random = 0 ~ 1
+            vals[i] = val;
+            for (let j = 0; j < i; j++) { // 이전값과 비교
+                if (vals[j] == val) { // 동일한 값이면 i--
+                    i--;
+                    break;
+                }
+            }
+        }
+        console.log(vals);
+    </script>
+</body>
+
+</html>

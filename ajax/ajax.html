@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <table id="tbl" border="1">
+        <tr>
+            <th>ID</th>
+            <th colspan="2">Name</th>
+            <th>e-mail</th>
+            <th>Gender</th>
+            <th>IP</th>
+        </tr>
+    </table>
+    <script>
+        let xhtp = new XMLHttpRequest();
+        xhtp.open('get', 'dataset.xml');
+        xhtp.send();
+        xhtp.onload = createBody;
+
+        function createBody() {
+            if (xhtp.readyState == 4 && xhtp.status == 200) {
+                let doc = xhtp.responseXML;
+                let result = doc.querySelectorAll('dataset > record');
+                let tbl = document.getElementById('tbl');
+                for (let i = 0; i < result.length; i++) {
+                    let tr = document.createElement('tr');
+                    for (let j = 0; j < result[i].childNodes.length; j++) {
+                        let td = document.createElement('td');
+                        let str = result[i].childNodes[j].childNodes[0].nodeValue;
+                        td.append(str);
+                        tr.append(td);
+                    }
+                    tbl.append(tr);
+                }
+                document.getElementById('show').appendChild(tbl);
+            }
+        }
+    </script>
+</body>
+
+</html>
